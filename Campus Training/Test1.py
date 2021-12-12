@@ -33,7 +33,7 @@ else:
 
 '''
 
-num=int(input("Enter a number : "))
+num=int(input("Enter a number of user choice : "))
 s=0
 for i in range(1,num+1):
     s=s+i
