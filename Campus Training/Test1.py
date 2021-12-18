@@ -32,12 +32,35 @@ else:
         print(f"{n} is not prime number")
 
 '''
-
+'''
 num=int(input("Enter a number of user's choice : "))
 s=0
 for i in range(1,num+1):
     s=s+i
 
 print(f"Sum of first {num} natural nos is {s}")
+
+fact = lambda n: 1 if n==1 else n*fact(n-1)
+print(fact(5))
+
+'''
+
+"""
+    Decorators
+"""
+
+def func(sum):
+    def func_1(a,b):
+        print("Start adding")
+        sum(a,b)
+        print("Finished adding")
+    return func_1
+
+@func
+def add(x,y):
+    s=x+y
+    print(f"Sum is {s}")
+
+add(15,8)
 
 
